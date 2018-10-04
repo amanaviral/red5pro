@@ -36,13 +36,13 @@
 		<property name="dataSource" value="/WEB-INF/simple-auth-plugin.credentials" />
 	</bean> -->
 
-	<bean id="simpleAuthSecurity" class="com.red5pro.server.plugin.simpleauth.Configuration" >
+	<!--<bean id="simpleAuthSecurity" class="com.red5pro.server.plugin.simpleauth.Configuration" >
 		<property name="active" value="true" />
 		<property name="rtmp" value="true" />
 		<property name="rtsp" value="true" />
 		<property name="rtc" value="true" />
 		<property name="rtmpAllowQueryParamsEnabled" value="true" />
 		<property name="allowedRtmpAgents" value="*" />
-	</bean>
+	</bean>-->
   		
 </beans>
