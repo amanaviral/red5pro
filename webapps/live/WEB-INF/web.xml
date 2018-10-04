@@ -12,7 +12,7 @@
     </context-param>
 
 
-    <security-constraint>
+  <!--  <security-constraint>
 
         <web-resource-collection>
 
@@ -42,7 +42,7 @@
 
         <role-name>admin</role-name>
 
-    </security-role>
+    </security-role>-->
 
 
     <!-- 
