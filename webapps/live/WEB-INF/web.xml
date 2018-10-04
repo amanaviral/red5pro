@@ -11,41 +11,40 @@
         <param-value>/live</param-value>
     </context-param>
 
-<!-- comment for web security
-<security-constraint>
 
-<web-resource-collection>
+    <security-constraint>
 
-<web-resource-name>red5pro</web-resource-name>
+        <web-resource-collection>
 
-<url-pattern>/*</url-pattern>
+            <web-resource-name>red5pro</web-resource-name>
 
-</web-resource-collection>
+            <url-pattern>/*</url-pattern>
 
-<auth-constraint>
+        </web-resource-collection>
 
-<role-name>admin</role-name>
+        <auth-constraint>
 
-</auth-constraint>
+            <role-name>admin</role-name>
 
-</security-constraint>
+        </auth-constraint>
 
- 
-<login-config>
+    </security-constraint>
 
-<auth-method>BASIC</auth-method>
 
-</login-config>
+    <login-config>
 
- 
-<security-role>
+        <auth-method>BASIC</auth-method>
 
-<role-name>admin</role-name>
+    </login-config>
 
-</security-role>
 
--->
-    
+    <security-role>
+
+        <role-name>admin</role-name>
+
+    </security-role>
+
+
     <!-- 
     <servlet>
         <servlet-name>cloudwatch</servlet-name>
