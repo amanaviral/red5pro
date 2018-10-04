@@ -1,0 +1,14 @@
+#EXTM3U
+#EXT-X-TARGETDURATION:6
+#EXT-X-VERSION:3
+#EXT-X-MEDIA-SEQUENCE:0
+#EXTINF:6.0150,
+iOS_audio_only_1.ts
+#EXTINF:6.0130,
+iOS_audio_only_2.ts
+#EXTINF:6.0140,
+iOS_audio_only_3.ts
+#EXTINF:6.0140,
+iOS_audio_only_4.ts
+#EXT-X-ENDLIST
+
