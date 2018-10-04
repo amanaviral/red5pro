@@ -25,7 +25,7 @@
         <param-value>/api</param-value>
     </context-param>
 
-    <!--<security-constraint>
+    <security-constraint>
 
         <web-resource-collection>
 
@@ -41,7 +41,7 @@
 
         </auth-constraint>
 
-    </security-constraint>-->
+    </security-constraint>
 
 
     <login-config>
