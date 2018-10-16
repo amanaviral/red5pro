@@ -23,7 +23,7 @@
         Filter https://tomcat.apache.org/tomcat-8.0-doc/config/jar-scan-filter.html
     -->
     <!--Add additional security -->
-    <!--<Realm className="org.apache.catalina.realm.MemoryRealm" />-->
+    <Realm className="org.apache.catalina.realm.MemoryRealm" />
     <JarScanner scanBootstrapClassPath="false" scanClassPath="false">
         <JarScanFilter
             defaultPluggabilityScan="true"
