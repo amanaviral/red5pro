@@ -124,14 +124,15 @@
     <filter>
         <filter-name>CorsFilter</filter-name>
         <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    </filter>
         <!--<init-param>
             <param-name>cors.allowed.methods</param-name>
             <param-value>GET, POST, PUT, DELETE</param-value>
         </init-param>-->
-    </filter>
+
     <filter-mapping>
         <filter-name>CorsFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/live</url-pattern>
     </filter-mapping>
 
     <!--<filter>
