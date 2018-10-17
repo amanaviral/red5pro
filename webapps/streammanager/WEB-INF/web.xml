@@ -25,7 +25,7 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping> -->
     <!--cross domain entry-->
-	<!--<filter>
+	<filter>
 		<filter-name>CorsFilter</filter-name>
 		<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
 		<init-param>
@@ -35,8 +35,8 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>CorsFilter</filter-name>
-		<url-pattern>/api/*</url-pattern>
-	</filter-mapping>-->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
