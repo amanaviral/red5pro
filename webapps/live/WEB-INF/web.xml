@@ -185,7 +185,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>-->
 
-    <filter>
+   <!-- <filter>
         <filter-name>CorsFilter</filter-name>
         <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
         <init-param>
@@ -215,6 +215,40 @@
     </filter>
     <filter-mapping>
         <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
+
+
+    <filter>
+        <filter-name>CORS</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilters</filter-class>
+        <init-param>
+            <param-name>cors.allowGenericHttpRequests</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>Access-Control-Allow-Origin</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.support.credentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedMethods</param-name>
+            <param-value>GET, HEAD, POST, OPTIONS</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.exposedHeaders</param-name>
+            <param-value>Access-Control-Allow-Headers</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CORS</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
