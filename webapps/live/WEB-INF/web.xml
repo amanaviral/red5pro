@@ -118,8 +118,8 @@
         <servlet-name>mediafiles</servlet-name>
         <url-pattern>/mediafiles/*</url-pattern>
     </servlet-mapping>
-    <!-- CORS filter with wideopen origin by default -->
-    <!--<filter>
+
+    <filter>
         <filter-name>CORS</filter-name>
         <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
         <async-supported>true</async-supported>
@@ -128,35 +128,17 @@
             <param-value>*</param-value>
         </init-param>
         <init-param>
-            <param-name>cors.support.credentials</param-name>
-            <param-value>true</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.allowGenericHttpRequests</param-name>
-            <param-value>true</param-value>
-        </init-param>
-
-        <init-param>
             <param-name>cors.allowSubdomains</param-name>
             <param-value>true</param-value>
         </init-param>
         <init-param>
             <param-name>cors.supportedMethods</param-name>
-            <param-value>GET, HEAD, POST, OPTIONS</param-value>
+            <param-value>GET, HEAD</param-value>
         </init-param>
         <init-param>
             <param-name>cors.maxAge</param-name>
             <param-value>3600</param-value>
         </init-param>
-    </filter>
-    <filter-mapping>
-        <filter-name>CORS</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
-    <filter>
-        <filter-name>CORS</filter-name>
-        <filter-class>com.thetransactioncompany.cors.CORSFilters</filter-class>
-        <async-supported>true</async-supported>
     </filter>
     <filter-mapping>
         <filter-name>CORS</filter-name>
