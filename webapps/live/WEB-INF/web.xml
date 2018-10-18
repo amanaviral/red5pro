@@ -125,7 +125,7 @@
         <async-supported>true</async-supported>
         <init-param>
             <param-name>cors.allowOrigin</param-name>
-            <param-value>http://api-test.kuvrr.com:9091</param-value>
+            <param-value>*</param-value>
         </init-param>
         <init-param>
             <param-name>cors.allowSubdomains</param-name>
