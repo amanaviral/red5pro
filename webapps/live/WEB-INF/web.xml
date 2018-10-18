@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<web-app version="3.0" 
+<web-app version="3.0"
          xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-         
-    <display-name>live</display-name>       
+
+    <display-name>live</display-name>
     <context-param>
         <param-name>webAppRootKey</param-name>
         <param-value>/live</param-value>
@@ -45,7 +45,7 @@
     </security-role>
 
 
-    <!-- 
+    <!--
     <servlet>
         <servlet-name>cloudwatch</servlet-name>
         <servlet-class>com.red5pro.cluster.plugin.api.validator.CloudWatchBase</servlet-class>
@@ -96,7 +96,7 @@
         <servlet-class>com.red5pro.stream.transform.mpegts.server.TSServlet</servlet-class>
         <load-on-startup>-1</load-on-startup>
     </servlet>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>hls2</servlet-name>
         <url-pattern>*.ts</url-pattern>
     </servlet-mapping>
@@ -111,26 +111,15 @@
     </servlet-mapping>
     <!-- FLV/MP4 S3 Listing -->
     <servlet>
-      <servlet-name>mediafiles</servlet-name>
-      <servlet-class>com.red5pro.media.storage.servlet.MediaFileListingServlet</servlet-class>
+        <servlet-name>mediafiles</servlet-name>
+        <servlet-class>com.red5pro.media.storage.servlet.MediaFileListingServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-      <servlet-name>mediafiles</servlet-name>
-      <url-pattern>/mediafiles/*</url-pattern>
+        <servlet-name>mediafiles</servlet-name>
+        <url-pattern>/mediafiles/*</url-pattern>
     </servlet-mapping>
     <!-- CORS filter with wideopen origin by default -->
-
-
-    <!--<filter>
-        <filter-name>CorsFilter</filter-name>
-        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>CorsFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
-
-    <!--<filter>
+    <filter>
         <filter-name>CORS</filter-name>
         <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
         <async-supported>true</async-supported>
@@ -154,102 +143,5 @@
     <filter-mapping>
         <filter-name>CORS</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
-
-
-    <!--<filter>
-        <filter-name>CORS</filter-name>
-        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
-
-        <init-param>
-            <param-name>cors.allowOrigin</param-name>
-            <param-value>*</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.supportsCredentials</param-name>
-            <param-value>true</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.supportedHeaders</param-name>
-            <param-value>accept, authorization, origin</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.supportedMethods</param-name>
-            <param-value>GET, POST, HEAD, OPTIONS</param-value>
-        </init-param>
-    </filter>
-
-
-    <filter-mapping>
-        <filter-name>CORS</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
-
-   <!-- <filter>
-        <filter-name>CorsFilter</filter-name>
-        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
-        <init-param>
-            <param-name>cors.allowed.origins</param-name>
-            <param-value>*</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.allowed.methods</param-name>
-            <param-value>GET,POST,HEAD,OPTIONS,PUT</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.allowed.headers</param-name>
-            <param-value>Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.exposed.headers</param-name>
-            <param-value>Access-Control-Allow-Origin,Access-Control-Allow-Credentials</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.support.credentials</param-name>
-            <param-value>true</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.preflight.maxage</param-name>
-            <param-value>10</param-value>
-        </init-param>
-    </filter>
-    <filter-mapping>
-        <filter-name>CorsFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
-
-
-    <filter>
-        <filter-name>CORS</filter-name>
-        <filter-class>com.thetransactioncompany.cors.CORSFilters</filter-class>
-        <init-param>
-            <param-name>cors.allowGenericHttpRequests</param-name>
-            <param-value>true</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.supportedHeaders</param-name>
-            <param-value>Access-Control-Allow-Origin</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.allowOrigin</param-name>
-            <param-value>http://localhost:8080</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.support.credentials</param-name>
-            <param-value>true</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.supportedMethods</param-name>
-            <param-value>GET, HEAD, POST, OPTIONS</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.exposedHeaders</param-name>
-            <param-value>Access-Control-Allow-Headers</param-value>
-        </init-param>
-    </filter>
-    <filter-mapping>
-        <filter-name>CORS</filter-name>
-        <url-pattern>/*</url-pattern>
     </filter-mapping>
-
 </web-app>
