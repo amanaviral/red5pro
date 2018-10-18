@@ -156,10 +156,10 @@
     <filter>
         <filter-name>CORS</filter-name>
         <filter-class>com.thetransactioncompany.cors.CORSFilters</filter-class>
-        <init-param>
+        <!--<init-param>
             <param-name>cors.allowGenericHttpRequests</param-name>
             <param-value>true</param-value>
-        </init-param>
+        </init-param>-->
         <init-param>
             <param-name>cors.supportedHeaders</param-name>
             <param-value>Access-Control-Allow-Origin</param-value>
