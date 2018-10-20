@@ -19,6 +19,7 @@
             <web-resource-name>red5pro</web-resource-name>
 
             <url-pattern>/*</url-pattern>
+            <http-method>OPTIONS</http-method>
 
         </web-resource-collection>
 
