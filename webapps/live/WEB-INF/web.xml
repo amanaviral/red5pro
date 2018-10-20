@@ -12,7 +12,7 @@
     </context-param>
 
 
-    <security-constraint>
+    <!--<security-constraint>
 
         <web-resource-collection>
 
@@ -28,6 +28,16 @@
 
         </auth-constraint>
 
+    </security-constraint>-->
+
+    <security-constraint>
+        <web-resource-collection>
+
+            <web-resource-name>red5pro</web-resource-name>
+
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <!-- no auth-constraint here -->
     </security-constraint>
 
 
